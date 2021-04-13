@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
+// Creating view
 public class View extends VBox {
 
     private Label CustomerID;
