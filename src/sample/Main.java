@@ -18,6 +18,7 @@ public class Main extends Application {
 
        primaryStage.setTitle("Banking Client");
 
+       // Resesting The Data Base for Debugging Reasons
        try {
 
            this.ResetDataBase();
@@ -26,10 +27,14 @@ public class Main extends Application {
            System.err.println(exception.getMessage());
        }
 
+       // Initializing two clients in the data base
        var client1 = new StreamClientAdder("3101361","1234",10000);
        var client2 = new StreamClientAdder("3101343","5678",7000);
 
+       // Creating a new GUI View
        var View = new View();
+
+       // Getting an Instance from the server
        StreamServerAdder server = StreamServerAdder.getInstance();
 
        server.run(View,client1);
