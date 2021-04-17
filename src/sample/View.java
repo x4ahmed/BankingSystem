@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 // Creating view
 public class View extends VBox {
 
+    //View components
     private Label CustomerID;
     private TextField textField1;
     private Label Password;
@@ -64,6 +65,7 @@ public class View extends VBox {
 
     public void EventHandler(StreamServerAdder server){
 
+        //Login Protocol
         LogIn.setOnAction(e->{
 
             if(server.getClient().isLogin()) {
@@ -163,6 +165,7 @@ public class View extends VBox {
 
         });
 
+        //Logout Protocol
         LogOut.setOnAction(e->{
 
             if(server.getClient().isLogin()){
